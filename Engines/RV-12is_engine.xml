@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+  File:     Rotax 912iS.xml
+  Author:   Aero-Matic v 0.83
+
+  Inputs:
+    name:           Rotax 912iS
+    type:           piston
+    power:          100.0 hp
+    augmented?      no
+    injected?       no
+-->
+
+<piston_engine name="Rotax 912iS">
+  <minmp unit="INHG">         10.0 </minmp>
+  <maxmp unit="INHG">         28.5 </maxmp>
+  <displacement unit="IN3"> 190.00 </displacement>
+  <maxhp>        100.00 </maxhp>
+  <cycles>         4.0 </cycles>
+  <idlerpm>      1400.0 </idlerpm>
+  <maxrpm>      5800.0 </maxrpm>
+  <sparkfaildrop>  0.1 </sparkfaildrop>
+  <volumetric-efficiency> 0.85 </volumetric-efficiency>
+  <man-press-lag> 0.1 </man-press-lag>
+  <static-friction  unit="HP"> 0.50 </static-friction>
+  <starter-torque> 80.00 </starter-torque>
+  <starter-rpm> 1400 </starter-rpm>
+  <bsfc>              0.37 </bsfc>
+  <stroke unit="IN">  2.4 </stroke>
+  <bore unit="IN">    3.31 </bore>
+  <cylinders>         2.0  </cylinders>
+  <compression-ratio>  10.8 </compression-ratio>
+</piston_engine>

@@ -1,0 +1,34 @@
+<PropertyList>
+    <sim>
+        <author>KJ7NLL (Clash), POLSKY1</author>
+        <expected-aircraft-dir-name>RV-12</expected-aircraft-dir-name>
+        <description>RV-12</description>
+        <long-description>
+            The RV-12is is the fuel injected version of the RV-12uls. It is a homebuilt aircraft developed by Van's aircraft that is routinely built by teens around the world.
+        </long-description>
+        <status>alpha</status>
+        <rating>
+            <FDM type="int">1</FDM>
+            <systems type="int">1</systems>
+            <cockpit type="int">2</cockpit>
+            <model type="int">2</model>
+        </rating>
+        <flight-model>jsb</flight-model>
+        <aero>RV-12is-jsbsim</aero>
+        <model>
+            <path>Aircraft/RV-12/Models/RV-12is.xml</path>
+        </model>
+        <view>
+            <name>Cockpit View</name>
+            <type>lookfrom</type>
+            <internal type="bool">true</internal>
+            <config>
+                <from-model type="bool">true</from-model>
+                <from-model-idx type="int">0</from-model-idx>
+                <x-offset-m type="double">-0.225203 m</x-offset-m>
+                <y-offset-m type="double">1.5</y-offset-m>
+                <z-offset-m type="double">-0.063249 m</z-offset-m>
+            </config>
+        </view>
+    </sim>
+</PropertyList>
