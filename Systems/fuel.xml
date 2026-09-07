@@ -19,7 +19,7 @@ Negative Gs (<-0.5g) cuts the supply to the collector tanks -->
       <default value="-0.1"/>
       <test logic="OR" value="0">
         propulsion/tank[0]/contents-lbs LE 0
-        propulsion/tank[1]/contents-lbs GE 0.74 <!-- 0.01 lb below capacity -->
+        propulsion/tank[2]/contents-lbs GE 0.74 <!-- 0.01 lb below capacity -->
         accelerations/Nz LE -0.5
       </test>
       <output>propulsion/tank[0]/external-flow-rate-pps</output>
