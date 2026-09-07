@@ -8,11 +8,3 @@ var laneset = func {
 
 setlistener("/controls/switches/laneA", laneset);
 setlistener("/controls/switches/laneB", laneset);
-
-# Make fuel pumps have a function.
-var pumpset = func {
-    if (getprop("/controls/switches/pump1") == false and getprop("/controls/switches/pump2") == false)
-        setprop("/engines/engine[0]/running", false);
-}
-
-setlistener("/engines/engine[0]/running", pumpset)
