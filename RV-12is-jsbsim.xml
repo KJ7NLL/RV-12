@@ -160,15 +160,27 @@
     <damping_coeff unit="LBS/FT/SEC">  1320.00 </damping_coeff>
   </contact>
 
+  <contact type="STRUCTURE" name="TAIL">
+    <location unit="IN">
+     <x>  141.959842519685039 </x>
+     <y> 0 </y>
+     <z>  40.065748031496063 </z>
+    </location>
+    <static_friction>  1.00 </static_friction>
+    <dynamic_friction> 1.00 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">       15000 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC">  1320.00 </damping_coeff>
+  </contact>
+
  </ground_reactions>
 
  <propulsion>
 
    <engine file="RV-12is_engine">
     <location unit="IN">
-      <x>  36.00 </x>
+      <x>  -76.613779527559055 </x>
       <y>   0.00 </y>
-      <z>   0.00 </z>
+      <z>   44.325590551181102 </z>
     </location>
     <orient unit="DEG">
       <pitch> 0.00 </pitch>
@@ -179,9 +191,9 @@
     <thruster file="RV-12is_prop">
      <sense> 1 </sense>
      <location unit="IN">
-       <x>  36.00 </x>
+       <x>  -76.613779527559055 </x>
        <y>   0.00 </y>
-       <z>   0.00 </z>
+       <z>   44.325590551181102 </z>
      </location>
      <orient unit="DEG">
        <pitch> 0.00 </pitch>
@@ -202,6 +214,8 @@
   </tank>
 
  </propulsion>
+
+ <!-- <system file="fuel"/> -->
 
  <flight_control name="FCS: RV-12is">
 
