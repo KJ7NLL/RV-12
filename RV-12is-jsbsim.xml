@@ -187,7 +187,8 @@
       <roll>  0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
-    <feed>0</feed>
+    <feed>1</feed> <!-- Pumps -->
+    <feed>2</feed>
     <thruster file="RV-12is_prop">
      <sense> 1 </sense>
      <location unit="IN">
@@ -212,10 +213,29 @@
      <capacity unit="LBS">  120 </capacity>
      <contents unit="LBS">  120 </contents>
   </tank>
+  <tank type="FUEL" number="1"> <!-- pump 1 -->
+     <location unit="IN">
+       <x>   9.52 </x>
+       <y>   0.00 </y>
+       <z>   0.00 </z>
+     </location>
+     <capacity unit="LBS">  0.75 </capacity>
+     <contents unit="LBS">  0.75 </contents>
+  </tank>
+  <tank type="FUEL" number="2"> <!-- pump 1 -->
+     <location unit="IN">
+       <x>   9.52 </x>
+       <y>   0.00 </y>
+       <z>   0.00 </z>
+     </location>
+     <capacity unit="LBS">  0.75 </capacity>
+     <contents unit="LBS">  0.75 </contents>
+  </tank>
+    
 
  </propulsion>
 
- <!-- <system file="fuel"/> -->
+ <system file="fuel"/>
 
  <flight_control name="FCS: RV-12is">
 

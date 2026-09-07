@@ -2,4 +2,30 @@
 
 <system name="fuel"> 
 	
+  <channel name="Fuel pumping">    
+    <switch>
+      <default value="-0.1"/>
+      <test logic="OR" value="0">
+        propulsion/tank[1]/contents-lbs LE 0.75 <!-- Pump 1 took fuel-->
+        propulsion/tank[0]/contents-lbs GE 0 <!-- Main tank has fuel -->
+		accelerations/Nz LE -0.5
+      </test>
+      <output>propulsion/tank[1]/external-flow-rate-pps</output>
+    </switch>
+    <switch>
+      <default value="-0.1"/>
+      <test logic="OR" value="0">
+        propulsion/tank[2]/contents-lbs LE 0.75 <!-- Pump 2 took fuel-->
+        propulsion/tank[0]/contents-lbs GE 0 <!-- Main tank has fuel -->
+		accelerations/Nz LE -0.5
+      </test>
+      <output>propulsion/tank[2]/external-flow-rate-pps</output>
+    </switch>
+	<summer>
+      <input>-propulsion/tank[0]/external-flow-rate-pps</input>
+      <input>-propulsion/tank[1]/external-flow-rate-pps</input>
+      <output>propulsion/tank[2]/external-flow-rate-pps</output>
+    </summer>  
+</channel>
+	
 </system>
