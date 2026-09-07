@@ -16,10 +16,10 @@ var switchloop = func() {
     setprop("controls/electrical/alt",enginerun);
   } else {
     # cut power
-    setprop("controls/electrical/master",1);
-    setprop("controls/electrical/pump1",p1);
-    setprop("controls/electrical/pump2",p2);
-    setprop("controls/electrical/alt",enginerun);
+    setprop("controls/electrical/master",0);
+    setprop("controls/electrical/pump1",0);
+    setprop("controls/electrical/pump2",0);
+    setprop("controls/electrical/alt",0);
   }
 }
 
