@@ -46,7 +46,24 @@ Or it just wont work
             </generic>
         </multiplay>
     </sim>
-
+    <input>
+        <keyboard>
+            <key n="115">
+    <name>s</name>
+  <desc></desc>
+	<binding>
+		<command>nasal</command>
+		<script>switches.starter();</script>
+	</binding>
+  <mod-up>
+    <binding>
+      <command>nasal</command>
+      <script>setprop("controls/engines/engine/starter",0);</script>
+    </binding>
+  </mod-up>
+ </key>
+		</keyboard>
+	</input>
     <nasal>
         <startup>
             <file>Nasal/startup.nas</file>
