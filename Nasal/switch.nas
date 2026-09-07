@@ -1,14 +1,12 @@
 # switch.nas | namespace switch
 # KJ7NLL, Phoenix
-
+var enginerun = getprop("/engines/engine/running") or 0;
+var p1 = getprop("/controls/switches/pump1") or 0;
+var p2 = getprop("/controls/switches/pump2") or 0;
+var serv = getprop("/systems/electrical/serviceable") or 0;
+var master = getprop("/controls/switches/master") or 0;
 
 var switchloop = func() {
-  var enginerun = getprop("/engines/engine/running") or 0;
-  var p1 = getprop("/controls/switches/pump1") or 0;
-  var p2 = getprop("/controls/switches/pump2") or 0;
-  var serv = getprop("/systems/electrical/serviceable") or 0;
-  var master = getprop("/controls/switches/master") or 0;
-
   if (serv and master) {
     # elec is op
     setprop("/controls/electric/master",1);
