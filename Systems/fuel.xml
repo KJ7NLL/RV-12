@@ -6,6 +6,8 @@ Negative Gs (<-0.5g) cuts the supply to the collector tanks -->
 
   <property value="0">/controls/electric/pump1</property>
   <property value="0">/controls/electric/pump2</property>
+  <property value="0">propulsion/tank[0]/flow1</property>
+  <property value="0">propulsion/tank[0]/flow2</property>
 
   <channel name="Fuel pumping">    
     <!-- Tank to pumps -->
@@ -13,57 +15,41 @@ Negative Gs (<-0.5g) cuts the supply to the collector tanks -->
     <switch>
       <default value="-0.1"/>
       <test logic="OR" value="0">
-        /controls/electric/pump2 EQ 0
-        propulsion/tank[0]/contents-lbs LE 0
-        propulsion/tank[1]/contents-lbs GE 0.74
-        accelerations/Nz LE -0.5
-      </test>
-      <output>propulsion/tank[0]/external-flow-rate-pps</output>
-    </switch>
-    <switch>
-      <default value="-0.1"/>
-      <test logic="OR" value="0">
         /controls/electric/pump1 EQ 0
         propulsion/tank[0]/contents-lbs LE 0
-        propulsion/tank[2]/contents-lbs GE 0.74
+        propulsion/tank[1]/contents-lbs GE 0.004
         accelerations/Nz LE -0.5
       </test>
-      <output>propulsion/tank[0]/external-flow-rate-pps</output>
+      <output>propulsion/tank[0]/flow1</output>
     </switch>
-
-    <!-- Pumps to collector -->
-    <switch>
-      <default value="-0.1"/>
-      <test logic="OR" value="0">
-        /controls/electric/pump1 EQ 0
-        propulsion/tank[1]/contents-lbs LE 0
-        propulsion/tank[3]/contents-lbs GE 0.01 <!-- 0.01 lb below capacity -->
-        accelerations/Nz LE -0.5
-      </test>
-      <output>propulsion/tank[1]/external-flow-rate-pps</output>
-    </switch>
-
     <switch>
       <default value="-0.1"/>
       <test logic="OR" value="0">
         /controls/electric/pump2 EQ 0
-        propulsion/tank[2]/contents-lbs LE 0
-        propulsion/tank[3]/contents-lbs GE 0.01 <!-- 0.01 lb below capacity -->
-        accelerations/Nz LE -0.5 
+        propulsion/tank[0]/contents-lbs LE 0
+        propulsion/tank[2]/contents-lbs GE 0.004
+        accelerations/Nz LE -0.5
       </test>
-      <output>propulsion/tank[2]/external-flow-rate-pps</output>
+      <output>propulsion/tank[0]/flow2</output>
     </switch>
 
     <summer>
-      <!-- Tank to pumps -->
-      <input>-propulsion/tank[0]/external-flow-rate-pps</input>
+      <input>propulsion/tank[0]/flow1</input>
+      <input>propulsion/tank[0]/flow2</input>
+      <output>propulsion/tank[0]/external-flow-rate-pps</output>
+    </summer>
+
+    <summer>
+      <!-- Tank to pumps1 -->
+      <input>-propulsion/tank[0]/flow1</input>
       <output>propulsion/tank[1]/external-flow-rate-pps</output>
+    </summer>
+
+    <summer>
+      <!-- Tank to pumps2 -->
+      <input>-propulsion/tank[0]/flow2</input>
       <output>propulsion/tank[2]/external-flow-rate-pps</output>
-      <!-- Pumps to collector -->
-      <input>-propulsion/tank[1]/external-flow-rate-pps</input>
-      <input>-propulsion/tank[2]/external-flow-rate-pps</input>
-      <output>propulsion/tank[3]/external-flow-rate-pps</output>
-    </summer>  
+    </summer>
 
   </channel>      
 

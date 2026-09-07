@@ -1,20 +1,21 @@
 # switch.nas | namespace switch
 # KJ7NLL, Phoenix
-var enginerun = getprop("/engines/engine/running") or 0;
-var p1 = getprop("/controls/switches/pump1") or 0;
-var p2 = getprop("/controls/switches/pump2") or 0;
-var serv = getprop("/systems/electrical/serviceable") or 0;
-var master = getprop("/controls/switches/master") or 0;
+setprop("/controls/switches/master",0);
+setprop("/systems/electrical/serviceable",1);
+setprop("/controls/switches/pump1",0);
+setprop("/controls/switches/pump2",0);
 
 var switchloop = func() {
-  if (serv and master) {
+  if (getprop("/controls/switches/master") == 1 and getprop("/systems/electrical/serviceable") == 1) {
     # elec is op
+  print("START AE");
     setprop("/controls/electric/master",1);
-    setprop("/controls/electric/pump1",p1);
-    setprop("/controls/electric/pump2",p2);
-    setprop("/controls/electric/alt",enginerun);
+    setprop("/controls/electric/pump1",getprop("/controls/switches/pump1"));
+    setprop("/controls/electric/pump2",getprop("/controls/switches/pump2"));
+    setprop("/controls/electric/alt",getprop("/engines/engine/running"));
   } else {
     # cut power
+    # print("STOP AE");
     setprop("/controls/electric/master",0);
     setprop("/controls/electric/pump1",0);
     setprop("/controls/electric/pump2",0);
@@ -23,11 +24,13 @@ var switchloop = func() {
 }
 
 var starter = func() {
-  if (master and serv) {
+  if (getprop("/controls/switches/master") == 1 and getprop("/systems/electrical/serviceable") == 1) {
     setprop("controls/engines/engine/starter",1);
+    print("STARTENG AE");
   } else {
     setprop("controls/engines/engine/starter",0);
   }
+
 }
 
 

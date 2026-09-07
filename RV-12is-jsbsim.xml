@@ -219,8 +219,8 @@
        <y>   0.00 </y>
        <z>   0.00 </z>
      </location>
-     <capacity unit="LBS">  0.75 </capacity>
-     <contents unit="LBS">  0.75 </contents>
+     <capacity unit="LBS">  0.005 </capacity>
+     <contents unit="LBS">  0.0 </contents>
   </tank>
   <tank type="FUEL" number="2"> <!-- pump 2 -->
      <location unit="IN">
@@ -228,19 +228,9 @@
        <y>   0.00 </y>
        <z>   0.00 </z>
      </location>
-     <capacity unit="LBS">  0.75 </capacity>
-     <contents unit="LBS">  0.75 </contents>
+     <capacity unit="LBS">  0.005 </capacity>
+     <contents unit="LBS">  0.0 </contents>
   </tank>
-  <tank type="FUEL" number="3"> <!-- engine accumulator -->
-     <location unit="IN">
-       <x>   9.52 </x>
-       <y>   0.00 </y>
-       <z>   0.00 </z>
-     </location>
-     <capacity unit="LBS">  0.02 </capacity>
-     <contents unit="LBS">  0.02 </contents>
-  </tank>
-    
 
  </propulsion>
 
