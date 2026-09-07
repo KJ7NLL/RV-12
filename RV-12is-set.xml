@@ -51,5 +51,8 @@ Or it just wont work
         <startup>
             <file>Nasal/startup.nas</file>
         </startup>
+        <switches>
+            <file>Nasal/switches.nas</file>
+        </switches>
     </nasal>
 </PropertyList>
