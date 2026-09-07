@@ -344,4 +344,29 @@
             </binding>
         </action>
     </animation>
+
+    <animation>
+        <type>knob</type>
+        <name>MASTER</name>
+        <object-name>MASTER.sw</object-name>
+        <property>/controls/switches/master</property>
+        <factor>-16.2</factor>
+	    <cursor>hand</cursor>
+        <center>
+            <x-m>-0.836544</x-m>
+            <y-m>-0.44468</y-m>
+            <z-m>1.19291</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/master</property>
+            </binding>
+        </action>
+    </animation>
 </PropertyList>
