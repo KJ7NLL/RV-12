@@ -369,4 +369,16 @@
             </binding>
         </action>
     </animation>
+
+    <!-- Effects -->
+
+    <effect>
+        <inherits-from>Aircraft/F-22/Models/testeffect</inherits-from>
+        <parameters>
+        <rain-enabled>1</rain-enabled>
+        </parameters>
+
+        <object-name>CANOPY.fwd</object-name>
+        <object-name>CANOPY.aft</object-name>
+    </effect>
 </PropertyList>
