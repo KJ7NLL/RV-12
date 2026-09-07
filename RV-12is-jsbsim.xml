@@ -219,8 +219,8 @@
        <y>   0.00 </y>
        <z>   0.00 </z>
      </location>
-     <capacity unit="LBS">  0.5 </capacity>
-     <contents unit="LBS">  0.5 </contents>
+     <capacity unit="LBS">  0.75 </capacity>
+     <contents unit="LBS">  0.75 </contents>
   </tank>
   <tank type="FUEL" number="2"> <!-- pump 1 -->
      <location unit="IN">
@@ -228,8 +228,8 @@
        <y>   0.00 </y>
        <z>   0.00 </z>
      </location>
-     <capacity unit="LBS">  0.5 </capacity>
-     <contents unit="LBS">  0.5 </contents>
+     <capacity unit="LBS">  0.75 </capacity>
+     <contents unit="LBS">  0.75 </contents>
   </tank>
     
 
