@@ -62,6 +62,8 @@ Or it just wont work
     </binding>
   </mod-up>
  </key>
+		</keyboard>
+	</input>
     <nasal>
         <startup>
             <file>Nasal/startup.nas</file>
