@@ -41,7 +41,7 @@ Or it just wont work
             <float n="5" type="float" alias="/surface-positions/elevator-pos-norm"/>		
             <float n="6" type="float" alias="/surface-positions/rudder-pos-norm"/>	
             <float n="7" type="float" alias="/surface-positions/left-aileron-pos-norm"/>	
-            <float n="8" type="float" alias="/surface-positions/right-aileron-pos-norm<"/>	
+            <float n="8" type="float" alias="/surface-positions/right-aileron-pos-norm"/>	
             <float n="9" type="float" alias="/surface-positions/flap-pos-norm"/>	
             </generic>
         </multiplay>
