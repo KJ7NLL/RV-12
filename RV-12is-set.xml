@@ -32,12 +32,6 @@
         </view>
         <multiplay>
             <generic>
-<!--
-Multiplayer Variables
-Make sure that all of them start with a "/"
-ex: /controls/flight/elevator
-Or it just wont work
--->
             <float n="5" type="float" alias="/surface-positions/elevator-pos-norm"/>		
             <float n="6" type="float" alias="/surface-positions/rudder-pos-norm"/>	
             <float n="7" type="float" alias="/surface-positions/left-aileron-pos-norm"/>	
@@ -71,5 +65,8 @@ Or it just wont work
         <switches>
             <file>Nasal/switch.nas</file>
         </switches>
+        <rain>
+            <file>Nasal/rain.nas</file>
+        </rain>
     </nasal>
 </PropertyList>
