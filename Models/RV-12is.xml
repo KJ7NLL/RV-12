@@ -243,4 +243,105 @@
             <z>0</z>
         </axis>
     </animation>
+
+    <!-- Switches -->
+    <animation>
+        <type>knob</type>
+        <name>PUMP1</name>
+        <object-name>PUMP1.sw</object-name>
+        <property>/controls/switches/pump1</property>
+        <factor>-16.2</factor>
+	    <cursor>hand</cursor>
+        <center>
+            <x-m>-0.839977</x-m>
+            <y-m>0.012553</y-m>
+            <z-m>0.90093</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/pump1</property>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <name>PUMP2</name>
+        <object-name>PUMP2.sw</object-name>
+        <property>/controls/switches/pump2</property>
+        <factor>-16.2</factor>
+	    <cursor>hand</cursor>
+        <center>
+            <x-m>-0.839977</x-m>
+            <y-m>0.029373</y-m>
+            <z-m>0.90093</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/pump2</property>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <name>LANEA</name>
+        <object-name>LANEA.sw</object-name>
+        <property>/controls/switches/laneA</property>
+        <factor>-16.2</factor>
+	    <cursor>hand</cursor>
+        <center>
+            <x-m>-0.836641</x-m>
+            <y-m>-0.420011</y-m>
+            <z-m>1.19291</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/laneA</property>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>knob</type>
+        <name>LANEB</name>
+        <object-name>LANEB.sw</object-name>
+        <property>/controls/switches/laneB</property>
+        <factor>-16.2</factor>
+	    <cursor>hand</cursor>
+        <center>
+            <x-m>-0.836641</x-m>
+            <y-m>-0.400947</y-m>
+            <z-m>1.19291</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <action>
+            <binding>
+                <command>property-toggle</command>
+                <property>/controls/switches/laneB</property>
+            </binding>
+        </action>
+    </animation>
 </PropertyList>

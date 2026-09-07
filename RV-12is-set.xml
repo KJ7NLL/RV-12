@@ -31,4 +31,10 @@
             </config>
         </view>
     </sim>
+
+    <nasal>
+        <startup>
+            <file>Nasal/startup.nas</file>
+        </startup>
+    </nasal>
 </PropertyList>
