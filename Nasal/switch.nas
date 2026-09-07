@@ -24,6 +24,13 @@ var switchloop = func() {
   }
 }
 
+var starter = func() {
+  if (master and serv) {
+    setprop("controls/engines/engine/starter",1);
+  } else {
+    setprop("controls/engines/engine/starter",0);
+  }
+}
 
 
 switchtimer = maketimer(0,switchloop);
