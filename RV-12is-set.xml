@@ -52,7 +52,7 @@ Or it just wont work
             <file>Nasal/startup.nas</file>
         </startup>
         <switches>
-            <file>Nasal/switches.nas</file>
+            <file>Nasal/switch.nas</file>
         </switches>
     </nasal>
 </PropertyList>

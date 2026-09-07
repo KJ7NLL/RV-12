@@ -3,23 +3,29 @@
 <system name="Fuel">
 <!-- tank[2] collector tank connected to the engine fuel pump, tank[0] and tank[1] feeds the collector through valves.
 Negative Gs (<-0.5g) cuts the supply to the collector tanks -->
+
+  <property value="0">/controls/electric/pump1</property>
+  <property value="0">/controls/electric/pump2</property>
+
   <channel name="Fuel pumping">    
     <!-- Tank to pumps -->
-    <switch>
-      <default value="-0.1"/>
-      <test logic="OR" value="0">
-        propulsion/tank[0]/contents-lbs LE 0
-        propulsion/tank[1]/contents-lbs GE 0.74 <!-- 0.01 lb below capacity -->
-        accelerations/Nz LE -0.5
-      </test>
-      <output>propulsion/tank[0]/external-flow-rate-pps</output>
-    </switch>
 
     <switch>
       <default value="-0.1"/>
       <test logic="OR" value="0">
+        /controls/electric/pump2 EQ 0
         propulsion/tank[0]/contents-lbs LE 0
-        propulsion/tank[2]/contents-lbs GE 0.74 <!-- 0.01 lb below capacity -->
+        propulsion/tank[1]/contents-lbs GE 0.74
+        accelerations/Nz LE -0.5
+      </test>
+      <output>propulsion/tank[0]/external-flow-rate-pps</output>
+    </switch>
+    <switch>
+      <default value="-0.1"/>
+      <test logic="OR" value="0">
+        /controls/electric/pump1 EQ 0
+        propulsion/tank[0]/contents-lbs LE 0
+        propulsion/tank[2]/contents-lbs GE 0.74
         accelerations/Nz LE -0.5
       </test>
       <output>propulsion/tank[0]/external-flow-rate-pps</output>
@@ -29,6 +35,7 @@ Negative Gs (<-0.5g) cuts the supply to the collector tanks -->
     <switch>
       <default value="-0.1"/>
       <test logic="OR" value="0">
+        /controls/electric/pump1 EQ 0
         propulsion/tank[1]/contents-lbs LE 0
         propulsion/tank[3]/contents-lbs GE 0.01 <!-- 0.01 lb below capacity -->
         accelerations/Nz LE -0.5
@@ -39,6 +46,7 @@ Negative Gs (<-0.5g) cuts the supply to the collector tanks -->
     <switch>
       <default value="-0.1"/>
       <test logic="OR" value="0">
+        /controls/electric/pump2 EQ 0
         propulsion/tank[2]/contents-lbs LE 0
         propulsion/tank[3]/contents-lbs GE 0.01 <!-- 0.01 lb below capacity -->
         accelerations/Nz LE -0.5 
