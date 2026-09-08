@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+ 
+<!-- Generic 28 Volt electrical system -->
+
+<PropertyList>
+
+  <!-- Supplier list -->
+
+  <supplier>
+    <name>Battery 1</name>
+    <prop>/systems/electrical/suppliers/battery[0]</prop>
+    <kind>battery</kind>
+    <volts>13.8</volts> <!-- needs to be > 24.5, but this is a guess -->
+    <amps>30</amps>   <!-- I have no idea! -->
+  </supplier>
+
+  <supplier>
+    <name>Alternator 1</name>
+    <prop>/systems/electrical/suppliers/alternator[0]</prop>
+    <kind>alternator</kind>
+    <rpm-source>/engines/engine/rpm</rpm-source>
+    <volts>14.5</volts> <!-- stubbed in -->
+    <amps>30</amps>   <!-- from the 172S Skyhawk Information Manual -->
+  </supplier>
+
+
+  <!-- Generic Outputs -->
+
+  <output>
+    <name>Starter 1 Power</name>
+    <prop>/systems/electrical/outputs/starter[0]</prop>
+  </output>
+
+  <!-- connect in power sources -->
+
+  <connector>
+    <input>Alternator 1</input>
+    <output>Master Bus</output>
+    <switch>
+      <prop>/controls/switches/master</prop>
+    </switch>
+  </connector>
+
+
+    <connector>
+    <input>Alternator 1</input>
+    <output>Battery 1</output>
+  </connector>
+
+  <connector>
+    <input>External 1</input>
+    <output>Master Bus</output>
+  </connector>
+
+  <connector>
+    <input>Battery 1</input>
+    <output>Master Bus</output>
+    <switch>
+      <prop>controls/switches/master</prop>
+    </switch>
+  </connector>
+  <!-- connect starter output -->
+
+  <connector>
+    <input>Master Bus</input>
+    <output>Starter 1 Power</output>
+    <switch>
+      <prop>/controls/engines/engine[0]/starter</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+
+  <!-- connect master bus outputs -->
+
+
+
+  
+</PropertyList>
