@@ -50,6 +50,17 @@
 			</autopilot>
 			-->
 		</systems>
+        <previews>
+            <preview>
+                <type>exterior</type>
+                <path>Splashes/thumbnail.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+        </previews>
+
+        <startup>
+			<splash-texture>Aircraft/RV-12/thumbnail.jpg</splash-texture>
+		</startup>
     </sim>
     <input>
         <keyboard>
@@ -80,4 +91,5 @@
             <file>Nasal/rain.nas</file>
         </rain>
     </nasal>
+
 </PropertyList>
