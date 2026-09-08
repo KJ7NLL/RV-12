@@ -381,4 +381,22 @@
         <object-name>CANOPY.fwd</object-name>
         <object-name>CANOPY.aft</object-name>
     </effect> -->
+
+    <!-- <effect>
+        <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+        <object-name>FUSELAGE</object-name>
+        <object-name>WINGL</object-name>
+        <object-name>WINGR</object-name>
+        <object-name>FLAPERONL</object-name>
+        <object-name>FLAPERONR</object-name>
+        <object-name>STABALATOR</object-name>
+        <object-name>RUDDER</object-name>
+        <object-name>AST</object-name>
+        <object-name>EXHAUST</object-name>
+    </effect> -->
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>CANOPY.fwd</object-name>
+        <object-name>CANOPY.aft</object-name>
+    </effect>
 </PropertyList>
