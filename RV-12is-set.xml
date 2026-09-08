@@ -9,7 +9,7 @@
         <status>alpha</status>
         <rating>
             <FDM type="int">1</FDM>
-            <systems type="int">1</systems>
+            <systems type="int">3</systems>
             <cockpit type="int">2</cockpit>
             <model type="int">2</model>
         </rating>
@@ -39,6 +39,17 @@
             <float n="9" type="float" alias="/surface-positions/flap-pos-norm"/>	
             </generic>
         </multiplay>
+
+		<systems>
+			<electrical>
+				<path>Aircraft/RV-12/Systems/battery.xml</path>
+			</electrical>
+			<!--
+			<autopilot>
+			   <path>Aircraft/RV-12/Systems/Autopilot.xml</path>
+			</autopilot>
+			-->
+		</systems>
     </sim>
     <input>
         <keyboard>
