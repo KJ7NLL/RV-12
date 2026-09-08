@@ -18,6 +18,9 @@
         <model>
             <path>Aircraft/RV-12/Models/RV-12is.xml</path>
         </model>
+        <model>
+            <path>Aircraft/RV-12/Models/pilot.xml</path>
+        </model>
         <view>
             <name>Cockpit View</name>
             <type>lookfrom</type>
