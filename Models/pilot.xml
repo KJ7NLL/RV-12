@@ -9,18 +9,18 @@
         <object-name>glasses</object-name>
         <object-name>headset</object-name>
         <object-name>Head</object-name>
-        <object-name>Torso</object-name>
-        <object-name>Rarm</object-name>
-        <object-name>Larm</object-name>
-        <object-name>Rforearm</object-name>
-        <object-name>Lforearm</object-name>
+        <object-name>Torso.001</object-name>
+        <object-name>Rarm.001</object-name>
+        <object-name>Larm.001</object-name>
+        <object-name>Rforearm.001</object-name>
+        <object-name>Lforearm.001</object-name>
         <object-name>Rhand</object-name>
         <object-name>Lhand</object-name>
-        <object-name>Pelvis</object-name>
-        <object-name>Rthigh</object-name>
-        <object-name>Lthigh</object-name>
-        <object-name>Rcalf</object-name>
-        <object-name>Lcalf</object-name>
+        <object-name>Pelvis.001</object-name>
+        <object-name>Rthigh.001</object-name>
+        <object-name>Lthigh.001</object-name>
+        <object-name>Rcalf.001</object-name>
+        <object-name>Lcalf.001</object-name>
         <object-name>Rfoot</object-name>
         <object-name>Lfoot</object-name>
         <condition>
@@ -35,8 +35,8 @@
         <object-name>Head</object-name>
         <object-name>headset</object-name>
         <object-name>glasses</object-name>
-        <property>controls/flight/aileron</property>
-        <factor>30</factor>
+        <property>rv-12/head-hdg-deg</property>
+        <factor>1</factor>
         <center>
             <x-m>-0.002369</x-m>
             <y-m>-0.264578</y-m>
@@ -45,7 +45,25 @@
         <axis>
             <x>0.0</x>
             <y>0.0</y>
-            <z>-1.0</z>
+            <z>1.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>Head</object-name>
+        <object-name>headset</object-name>
+        <object-name>glasses</object-name>
+        <property>rv-12/head-ptc-deg</property>
+        <factor>1</factor>
+        <center>
+            <x-m>-0.002369</x-m>
+            <y-m>-0.264578</y-m>
+            <z-m>1.40608</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
         </axis>
     </animation>
 
