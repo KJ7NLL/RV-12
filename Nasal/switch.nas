@@ -33,6 +33,16 @@ var starter = func() {
 
 }
 
+# Set magnetos with lane switches. Maybe later will try to implement true lanes. :)
+var laneset = func {
+    var laneA = getprop("/controls/switches/laneA") or 0;
+    var laneB = getprop("/controls/switches/laneB") or 0;
+
+    setprop("controls/engines/engine/magnetos", laneA + (laneB * 2));
+}
+
+setlistener("/controls/switches/laneA", laneset);
+setlistener("/controls/switches/laneB", laneset);
 
 switchtimer = maketimer(0,switchloop);
 switchtimer.start();
