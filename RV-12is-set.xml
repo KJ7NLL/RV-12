@@ -35,6 +35,9 @@
         </view>
         <multiplay>
             <generic>
+			<float n="0" type="float" alias="/rv-12/head-hdg-deg"/>		
+		    <float n="1" type="float" alias="/rv-12/head-ptc-deg"/>	
+			
             <float n="5" type="float" alias="/surface-positions/elevator-pos-norm"/>		
             <float n="6" type="float" alias="/surface-positions/rudder-pos-norm"/>	
             <float n="7" type="float" alias="/surface-positions/left-aileron-pos-norm"/>	
