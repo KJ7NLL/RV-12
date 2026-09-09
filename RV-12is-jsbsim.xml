@@ -76,12 +76,30 @@
      <z>   30.86  </z>
    </location>
    <pointmass name="Payload">
-    <description> 350 LBS + full (195 LBS) fuel should bring model up to entered max weight</description>
-    <weight unit="LBS">    174.8 </weight>
+    <description>Pilot</description>
+    <weight unit="LBS">    180 </weight>
     <location name="POINTMASS" unit="IN">
-     <x>   -10.17 </x>
-     <y>   0.00   </y>
-     <z>   30.86  </z>
+     <x>   -8.906889763779528 </x>
+     <y>   -10.396811023622047 </y>
+     <z>   32.875551181102362  </z>
+    </location>
+  </pointmass>
+  <pointmass name="Payload">
+    <description>Co-Pilot</description>
+    <weight unit="LBS">    180 </weight>
+    <location name="POINTMASS" unit="IN">
+     <x>   -8.906889763779528 </x>
+     <y>   10.396811023622047 </y>
+     <z>   32.875551181102362  </z>
+    </location>
+  </pointmass>
+  <pointmass name="Payload">
+    <description>Baggage</description>
+    <weight unit="LBS">    70 </weight>
+    <location name="POINTMASS" unit="IN">
+     <x>   22.786574803149606 </x>
+     <y>   0 </y>
+     <z>   43.606299212598425  </z>
     </location>
   </pointmass> 
  </mass_balance>

@@ -65,22 +65,46 @@
 			<splash-texture>Aircraft/RV-12/thumbnail.jpg</splash-texture>
 		</startup>
     </sim>
+
+<!-- Payloads -->
+    <payload>
+        <weight>
+            <name type="string">Pilot</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+            <min-lb type="double">0</min-lb>
+            <max-lb type="double">180</max-lb>
+        </weight>
+        <weight>
+            <name type="string">Co-Pilot</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+            <min-lb type="double">0</min-lb>
+            <max-lb type="double">180</max-lb>
+        </weight>
+        <weight>
+            <name type="string">Baggage</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+            <min-lb type="double">0</min-lb>
+            <max-lb type="double">70</max-lb>
+        </weight>
+    </payload>
+
+<!-- Keybinds -->
     <input>
         <keyboard>
             <key n="115">
-    <name>s</name>
-  <desc></desc>
-	<binding>
-		<command>nasal</command>
-		<script>switches.starter();</script>
-	</binding>
-  <mod-up>
-    <binding>
-      <command>nasal</command>
-      <script>setprop("controls/engines/engine/starter",0);</script>
-    </binding>
-  </mod-up>
- </key>
+                <name>s</name>
+                <desc></desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>switches.starter();</script>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>nasal</command>
+                        <script>setprop("controls/engines/engine/starter",0);</script>
+                    </binding>
+                </mod-up>
+            </key>
 		</keyboard>
 	</input>
     <nasal>
