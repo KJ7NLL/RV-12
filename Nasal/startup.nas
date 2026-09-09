@@ -1,4 +1,4 @@
-# KV-12 inital startup
+# RV-12 inital startup
 # KJ7NLL, Phoenix (phny)
 
 # Set magnetos with lane switches. Maybe later will try to implement true lanes. :)
@@ -13,12 +13,12 @@ setlistener("/controls/switches/laneA", laneset);
 setlistener("/controls/switches/laneB", laneset);
 
 # phny pilot head movement
-setprop("kv12/head-hdg-deg",0); # Head moving gimmick
-setprop("kv12/head-ptc-deg",0); # Head moving gimmick
+setprop("rv-12/head-hdg-deg",0); # Head moving gimmick
+setprop("rv-12/head-ptc-deg",0); # Head moving gimmick
 var updatehead = func { # Head movement thingy
   if (getprop("sim/current-view/internal") == 1) { # only move head while in cockpit
-    setprop("kv12/head-hdg-deg",getprop("sim/current-view/heading-offset-deg"));
-    setprop("kv12/head-ptc-deg",getprop("sim/current-view/pitch-offset-deg"));
+    setprop("rv-12/head-hdg-deg",getprop("sim/current-view/heading-offset-deg"));
+    setprop("rv-12/head-ptc-deg",getprop("sim/current-view/pitch-offset-deg"));
   }
 }
 # the maketimer
