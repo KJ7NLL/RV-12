@@ -64,6 +64,25 @@
         <startup>
 			<splash-texture>Aircraft/RV-12/thumbnail.jpg</splash-texture>
 		</startup>
+
+<!-- Menubar -->
+        <menubar>
+            <default>
+                <menu n="100">
+                    <label>RV-12iS</label>
+                    <enabled type="bool">true</enabled>
+
+                    <!-- <item>
+                        <label>mixture slider</label>
+                        <binding>
+                            <command>dialog-show</command>
+                            <dialog-name>mixtureslide</dialog-name>
+                        </binding>
+                    </item> -->
+
+                </menu>
+            </default>
+        </menubar>
     </sim>
 
 <!-- Payloads -->

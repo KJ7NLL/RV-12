@@ -10,12 +10,20 @@ var updatehead = func { # Head movement thingy
     setprop("rv-12/head-ptc-deg",getprop("sim/current-view/pitch-offset-deg"));
   }
 }
-# the maketimer
+# the maketimera
 headupdate = maketimer(0.05,updatehead);
+
+var updatemixture = func {
+  setprop("controls/engines/engine/mixture", getprop("controls/engines/engine/mixture-ecu-calc"))
+}
+
+# the maketimere
+mixtureupdate = maketimer(0.05,updatemixture);
 
 # Loop Control
 
 # FDM 
 setlistener("sim/signals/fdm-initialized", func {
    headupdate.start();
+   mixtureupdate.start();
 });

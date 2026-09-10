@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+    <name>mixtureslide</name>
+    <layout>vbox</layout>
+  	<draggable>true</draggable>
+    <resizable>true</resizable>
+
+    <text>
+        <label>Mixture</label>
+    </text>
+
+    <slider>
+        <name>Mixture</name>
+        <property>controls/engines/engine/mixture</property>
+        <min>0</min>
+        <max>1</max>
+        <live>true</live>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+    </slider>
+
+    <text>
+        <property>controls/engines/engine/mixture</property>
+        <live>true</live>
+    </text>
+    <text>
+        <property>engines/engine/rpm</property>
+        <live>true</live>
+    </text>
+</PropertyList>

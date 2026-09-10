@@ -1,0 +1,22 @@
+<?xml version="1.0"?>  
+
+<!-- Automatically control mixture and other engine controls electronically -->
+<system name="ECU">
+    <!-- <property value="1">controls/engines/engine/mixture</property> -->
+    <function name="/controls/engines/engine/mixture-ecu-calc">
+        <table>
+            <independentVar lookup="row">/instrumentation/altimeter/pressure-alt-ft</independentVar>
+            <independentVar lookup="column">/environment/temperature-degf</independentVar>
+            <tableData>
+                    -20 0   20  40  60  80  100
+            0       1   1   1   1   1   1   1
+            3000    1   1   1   1   1   1   1
+            5000    0.95   0.95   0.95   0.933   0.933   0.933  0.933
+            7000    0.8833   0.866   0.866   0.866   0.866   0.866   0.866
+            9000    0.8   0.8   0.8   0.8   0.8   0.8   0.8
+            11000   0.733   0.733   0.733   0.733   0.7166   0.7166   0.7166
+            13000   0.7   0.7   0.7   0.7   0.7   0.7   0.7
+            </tableData>
+        </table>
+    </function>
+</system>

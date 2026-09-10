@@ -253,6 +253,7 @@
  </propulsion>
 
  <system file="fuel"/>
+ <system file="ECU"/>
 
  <flight_control name="FCS: RV-12is">
 
