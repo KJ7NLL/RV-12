@@ -62,6 +62,16 @@
                 <path>Splashes/thumbnail.jpg</path>
                 <splash type="bool">true</splash>
             </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splashes/Splash1.png</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splashes/Splash2.png</path>
+                <splash type="bool">true</splash>
+            </preview>
         </previews>
 
         <startup>
